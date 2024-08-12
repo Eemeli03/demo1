@@ -1,0 +1,40 @@
+.final-screen-container {
+    display: flex;
+    flex-direction: column; /* Muutettu, jotta napit ovat päällekkäin */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #1D1D1F;
+  }
+  
+  .final-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Keskitetään sisältö vaakasuunnassa */
+    width: 200px;
+    height: 65px;
+    padding: 15px 20px;
+    margin: 10px 0; /* Varmistetaan, että napit eivät ole kiinni toisissaan */
+    font-size: 23px;
+    color: white;
+    background-color: #0071e3;
+    border: none;
+    border-radius: 45px;
+    outline: none;
+  }
+  
+  .final-button:hover {
+    background-color: #0066CC; /* Change background color on hover */
+  }
+
+  .final-button:active {
+    border: none;
+    outline: none;
+    background-color: #005cb8;
+  }
+  
+  .final-button:focus {
+    outline: none;
+  }
+  

@@ -1,0 +1,41 @@
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.result-svg {
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 3.5s ease-in-out;
+  width: 250px; /* Määritä mittarin koko tässä */
+  height: 250px; /* Varmista, että leveys ja korkeus ovat samat */
+}
+
+.circle-bg {
+  stroke: #ffffff;
+  fill: transparent;
+  stroke-width: 13; /* Määritä taustaympyrän viivan paksuus */
+}
+
+.circle-fg {
+  stroke: #4caf50;
+  fill: transparent;
+  stroke-width: 13; /* Määritä edistyvän ympyrän viivan paksuus */
+  stroke-linecap: round;
+}
+
+.percentage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px; /* Määritä prosenttiluvun koko tässä */
+  font-weight: bold;
+  color: #4caf50;
+}

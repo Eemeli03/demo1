@@ -1,0 +1,46 @@
+/* AnswerBox.css */
+
+.answer-box {
+  font-size: 17px;
+  flex: 1;
+  padding: 0px;
+  height: 150px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Lisää siirtymä */
+}
+
+/* Korostetaan oikea ja väärä vastaus */
+.answer-box.correct-answer {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.answer-box.incorrect-answer {
+  background-color: #4a4a4a; /* Grey */
+  color: white;
+}
+
+/* Estetään hover- ja active-tilat sekä klikkaaminen, kun kysymykseen on vastattu */
+.answer-box.answered {
+  cursor: not-allowed; /* Muuttaa kursorin "ei sallittu" -tilaan */
+  pointer-events: none; /* Estää klikkaamisen */
+}
+
+/* Estä hover-tilan vaikutus, kun kysymykseen on vastattu */
+.answer-box:not(.answered):hover {
+  background-color: #a2a2a2;
+}
+
+/* Estä active-tilan vaikutus, kun kysymykseen on vastattu */
+.answer-box:not(.answered):active {
+  background-color: #898989;
+}

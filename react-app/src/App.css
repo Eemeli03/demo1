@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Make the container full height */
+  width: 100vw;  /* Make the container full width */
+  background-color: #282c34; /* Make sure the background color covers the full area */
+  margin: 0;
+  user-select: none;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

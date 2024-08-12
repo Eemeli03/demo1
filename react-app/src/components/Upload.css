@@ -1,0 +1,49 @@
+.upload-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1D1D1F;
+}
+
+.upload-button {
+  width: 250px;
+  height: 250px;
+  background-color: #1D1D1F; /* Initial background color */
+  border: 5px solid #0071E3; /* Consistent border color */
+  border-radius: 45px; /* Rounded corners */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+.upload-button.box {
+  border-radius: 45px;
+}
+
+/* Remove default butTon styles */
+.upload-button:hover {
+  background-color: #0071E3; /* Change background color on hover */
+  border-color: #0071E3; /* Ensure border color stays the same */
+  outline: none; /* Remove focus outline */
+  box-shadow: none; /* Remove any default box shadow */
+}
+.upload-button:focus {
+  outline: none;
+}
+.upload-button:active {
+  background-color: #005cb9;
+  border-color: #005cb9;
+}
+
+.hidden-input {
+  display: none;
+}
