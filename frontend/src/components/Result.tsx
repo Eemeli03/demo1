@@ -18,7 +18,6 @@ const Result: React.FC<ResultProps> = ({
   const percentage = (correctAnswers / totalQuestions) * 100;
 
   useEffect(() => {
-    let start = 0;
     const duration = 1500; // Animaation kesto millisekunteina (3.5 sekuntia)
     const frameDuration = 16;
     const totalFrames = Math.round(duration / frameDuration);

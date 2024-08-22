@@ -13,16 +13,7 @@ const useViewHandler = () => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
 
-  const handleFileChange = (file: File) => {
-    setView('loading');
-    console.log('File selected:', file);
-    // Simulate a file upload delay
-    setTimeout(() => {
-      setView('questions');
-    }, 50000);
-  };
-
-  const handleFinish = (correct: number, total: number) => {
+  const handleFinish = (correct: number) => {
     setCorrectAnswersCount(correct);
     setView('result');
   };

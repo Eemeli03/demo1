@@ -11,7 +11,6 @@ const Upload: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [view, setView] = useState<'upload' | 'loading' | 'questions' | 'result' | 'final'>('upload');
   const [questions, setQuestions] = useState<any[]>([]);
-  const [correctAnswers, setCorrectAnswers] = useState<number>(0);
   const [score, setScore] = useState(0);
 
   useEffect(() => {
@@ -32,9 +31,8 @@ const Upload: React.FC = () => {
         const formData = new FormData();
         formData.append('file', file);
         const response = await axios.post('http://127.0.0.1:5000/upload', formData);
-        const { questions, correct_answers } = response.data;
+        const { questions } = response.data;
         setQuestions(questions);
-        setCorrectAnswers(correct_answers.length);
         setView('questions');
       } catch (error) {
         console.error('Error uploading file:', error);
