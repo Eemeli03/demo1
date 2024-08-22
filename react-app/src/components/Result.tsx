@@ -19,7 +19,7 @@ const Result: React.FC<ResultProps> = ({
 
   useEffect(() => {
     let start = 0;
-    const duration = 3500; // Animaation kesto millisekunteina (3.5 sekuntia)
+    const duration = 1500; // Animaation kesto millisekunteina (3.5 sekuntia)
     const frameDuration = 16;
     const totalFrames = Math.round(duration / frameDuration);
     let currentFrame = 0;

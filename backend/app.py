@@ -1,14 +1,21 @@
 from flask import Flask, request, jsonify
 import fitz  # PyMuPDF module
+import openai
 from openai import OpenAI
-
-client = OpenAI(api_key='put your api key here')
 import os
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+# Lataa ympäristömuuttujat .env-tiedostosta
+load_dotenv()
+
+# Hae API-avain ympäristömuuttujasta ja luo OpenAI-asiakas
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 app = Flask(__name__)
 CORS(app)
-
 
 def read_pdf(file_path):
     try:
@@ -34,7 +41,7 @@ def generate_multiple_choice_questions(text):
         stop=None,
         temperature=0.7)
         return response.choices[0].message.content.strip()
-    except OpenAI.OpenAIError as e:
+    except openai.OpenAIError as e:
         print(f"Error generating questions: {e}")
         return "Error generating questions"
 

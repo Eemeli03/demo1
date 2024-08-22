@@ -53,9 +53,9 @@ const Upload: React.FC = () => {
       // Lisää 6 sekunnin viive ennen siirtymistä 'final' -näkymään
       setTimeout(() => {
         setView('final');
-      }, 4000); // 6 sekunnin viive ennen FinalScreen-näkymää
+      }, 6000); // 6 sekunnin viive ennen FinalScreen-näkymää
 
-    }, 1000); // 1 sekunnin viive ennen Result-näkymää
+    }, 1); // 1 sekunnin viive ennen Result-näkymää
   };
 
   const handleRetry = () => {
